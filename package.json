@@ -1,0 +1,23 @@
+{
+  "name": "nerds",
+  "version": "1.0.0",
+  "description": "nerds",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ellianta/nerds.git"
+  },
+  "author": "Ellianta",
+  "license": "ISC",
+  "homepage": "https://github.com/Ellianta/nerds#readme",
+
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0"
+  },
+  "scripts":{
+    "start": "grunt serve"
+  }
+}
