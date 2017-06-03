@@ -35,7 +35,6 @@ body{
 }
 
 .page-header{
-  min-height: 435px;
   background-color: #eeeeee;
 }
 .page-header__navigation{
@@ -78,7 +77,6 @@ body{
 
 .basket{
   float: right;
-  position: relative;
 }
 .basket__link{
   display: block;
@@ -89,14 +87,13 @@ body{
   color: black;
   font-size: 14px;
   line-height: 30px;
+  background: url("img/icons/icon-basket.png") no-repeat 0 37px;
 }
-.basket::before{
-  content: " ";
-  position: absolute;
-  background: url("img/icons/icon-basket.png");
-  width: 15px;
-  height: 15px;
-  top: 36px;
+.basket__link:hover{
+  background: url("img/icons/icon-basket-hover.png") no-repeat 0 37px;
+}
+.basket__link:focus{
+  background : url("img/icons/icon-basket-focus.png") no-repeat 0 37px;
 }
 .slider{
   width: 880px;
@@ -332,7 +329,32 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-
+.our-products__link{
+  display: block;
+  width: 209px;
+  height: 90px;
+}
+.our-products__link--glukhanko{
+  background: url("img/glukhanko-logo.png") no-repeat 50%;
+}
+.our-products__link--academy{
+  background: url("img/academy-logo.png") no-repeat 50%;
+}
+.our-products__link--barbershop{
+  background: url("img/barbershop-logo.png") no-repeat 50%;
+}
+.our-products__link--glukhanko:hover,
+.our-products__link--glukhanko:focus{
+  background: url("img/glukhanko-logo-hover.png") no-repeat 50%;
+}
+.our-products__link--academy:hover,
+.our-products__link--academy:focus{
+  background: url("img/academy-logo-hover.png") no-repeat 50%;
+}
+.our-products__link--barbershop:hover,
+.our-products__link--barbershop:focus{
+  background: url("img/barbershop-logo-hover.png") no-repeat 50%;
+}
 .map{
   width: 100%;
   height: 416px;
@@ -380,6 +402,7 @@ body{
 }
 .social__link:focus{
   background-color: #d6494d;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15) inset;
 }
 .social__link--vk{
   background: #e1e1e1 url("img/icons/icon-vk.png") no-repeat 50% 50%;
