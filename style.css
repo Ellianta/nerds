@@ -26,14 +26,26 @@ body{
   text-transform: uppercase;
   text-decoration: none;
 }
+.button:hover{
+  background-color: #d6494d;
+}
+.button:focus{
+  background-color: #b63538;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15) inset;
+}
 
 .page-header{
-  min-height: 435px;
   background-color: #eeeeee;
 }
 .page-header__navigation{
   min-height: 90px;
   padding-top: 25px;
+}
+.page-header__navigation a:hover{
+  color: #fb565a;
+}
+.page-header__navigation a:focus{
+  color: #cecece;
 }
 .page-header__logo{
   float: left;
@@ -62,9 +74,9 @@ body{
   font-size: 14px;
   line-height: 30px;
 }
+
 .basket{
   float: right;
-  position: relative;
 }
 .basket__link{
   display: block;
@@ -75,56 +87,107 @@ body{
   color: black;
   font-size: 14px;
   line-height: 30px;
+  background: url("img/icons/icon-basket.png") no-repeat 0 37px;
 }
-.basket::before{
-  content: " ";
-  position: absolute;
-  background: url("img/icons/icon-basket.png");
-  width: 15px;
-  height: 15px;
-  top: 36px;
+.basket__link:hover{
+  background: url("img/icons/icon-basket-hover.png") no-repeat 0 37px;
+}
+.basket__link:focus{
+  background : url("img/icons/icon-basket-focus.png") no-repeat 0 37px;
 }
 .slider{
-  position: relative;
   width: 880px;
   height: 320px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.slider__toggle{
+  display: none;
+}
+.slider__inner{
+  width: inherit;
+  height: inherit;
 }
 .slider__slide{
   position: absolute;
-  width: 100%;
-  height: 320px;
-  background-color: #eeeeee;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  opacity: 0;
 }
-.slider__slide--first{
+ /*------Стили для каждого слайда-------*/
+ .slider__promo{
+   float: left;
+   width: 380px;
+   padding-top: 35px;
+ }
+ .slider__promo--second,
+ .slider__promo--third{
+   width: 470px;
+ }
+ .slider__image{
+   float: right;
+ }
+ .slider__image--first{
+   padding-top: 18px;
+ }
+ .slider__image--second{
+   padding-top: 21px;
+   padding-right: 10px;
+ }
+ .slider__image--third{
+   padding-right: 5px;
+ }
+ .slider__slogan{
+   font-size: 36px;
+   line-height: 36px;
+   font-weight: 500;
+   margin: 0;
+   margin-bottom: 27px;
+ }
+ .slider__promo p{
+   font-size: 16px;
+   line-height: 22px;
+   margin-bottom: 30px;
+ }
+
+/*Стили для лейблов*/
+.slider__controls{
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  bottom: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+.slider__control{
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  border: 3px solid white;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+ /*-----ПЕРЕКЛЮЧЕНИЕ------*/
+#slide1:checked ~ .slider__controls > .slider__control--first,
+#slide2:checked ~ .slider__controls > .slider__control--second,
+#slide3:checked ~ .slider__controls > .slider__control--third{
+  background-color: #c5c5c5;
+}
+#slide1:checked ~ .slider__inner > .slider__slide--first,
+#slide2:checked ~ .slider__inner > .slider__slide--second,
+#slide3:checked ~ .slider__inner > .slider__slide--third{
   z-index: 1;
+  opacity: 1;
 }
-.slider__image--first{
-  margin-top: 10px;
-}
-.slider__promo{
-  float: left;
-  width: 380px;
-  padding-top: 35px;
-}
-.slider__slogan{
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 500;
-  margin: 0;
-  margin-bottom: 27px;
-}
-.slider__promo p{
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 30px;
-}
-.slider__image{
-  float: right;
-}
-.button--slider{
-  padding-left: 70px;
-  padding-right: 70px;
-}
+
 
 .main-promo{
   display: flex;
@@ -153,8 +216,22 @@ body{
 .button--green{
   background-color: #00ca74;
 }
+.button--green:hover{
+  background-color: #01a25e;
+}
+.button--green:focus{
+  background-color: #009053;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15) inset;
+}
 .button--yellow{
   background-color: #efc84a;
+}
+.button--yellow:hover{
+  background-color: #d6ae2c;
+}
+.button--yellow:focus{
+  background-color: #c09b24;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
 .main-content{
@@ -252,6 +329,32 @@ body{
   justify-content: space-between;
   align-items: center;
 }
+.our-products__link{
+  display: block;
+  width: 209px;
+  height: 90px;
+}
+.our-products__link--glukhanko{
+  background: url("img/glukhanko-logo.png") no-repeat 50%;
+}
+.our-products__link--academy{
+  background: url("img/academy-logo.png") no-repeat 50%;
+}
+.our-products__link--barbershop{
+  background: url("img/barbershop-logo.png") no-repeat 50%;
+}
+.our-products__link--glukhanko:hover,
+.our-products__link--glukhanko:focus{
+  background: url("img/glukhanko-logo-hover.png") no-repeat 50%;
+}
+.our-products__link--academy:hover,
+.our-products__link--academy:focus{
+  background: url("img/academy-logo-hover.png") no-repeat 50%;
+}
+.our-products__link--barbershop:hover,
+.our-products__link--barbershop:focus{
+  background: url("img/barbershop-logo-hover.png") no-repeat 50%;
+}
 .map{
   width: 100%;
   height: 416px;
@@ -293,6 +396,13 @@ body{
   height: 64px;
   border-radius: 50%;
   background-color: #e1e1e1;
+}
+.social__link:hover{
+  background-color: #fb565a;
+}
+.social__link:focus{
+  background-color: #d6494d;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.15) inset;
 }
 .social__link--vk{
   background: #e1e1e1 url("img/icons/icon-vk.png") no-repeat 50% 50%;

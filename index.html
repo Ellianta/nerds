@@ -30,10 +30,19 @@
 
 </div>
 
-<div class="slider clearfix">
- <div class="slider__slide slider__slide--first">
+<div class="slider">
+
+
+   <input class="slider__toggle" type="radio" name="slider" id="slide1" checked>
+   <input class="slider__toggle" type="radio" name="slider" id="slide2">
+   <input class="slider__toggle" type="radio" name="slider" id="slide3">
+
+
+<div class="slider__inner   clearfix">
+
+ <div class="slider__slide  slider__slide--first">
   <div class="slider__promo">
-   <h2 class="slider__slogan">Долго, дорого, скурпулезно.</h2>
+   <b class="slider__slogan">Долго, дорого, скурпулезно.</b>
    <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
    <a class="button button--slider" href="#">Узнать больше</a>
   </div>
@@ -41,9 +50,10 @@
    <img src="img/slide1.png" alt="Слайдер">
   </div>
  </div>
- <div class="slider__slide slider__slide--second">
-  <div class="slider__promo">
-   <h2 class="slider__slogan">Любите ли вы математику, как любим ее мы?</h2>
+
+ <div class="slider__slide  slider__slide--second">
+  <div class="slider__promo slider__promo--second">
+   <b class="slider__slogan">Любите ли вы математику, как любим ее мы?</b>
    <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать</p>
    <a class="button button--slider" href="#">Узнать больше</a>
   </div>
@@ -51,9 +61,10 @@
    <img src="img/slide2.png" alt="Слайдер">
   </div>
  </div>
- <div class="slider__slide slider__slide--third">
-  <div class="slider__promo">
-   <h2 class="slider__slogan">Только наркотики, только хардкор!</h2>
+
+ <div class="slider__slide  slider__slide--third">
+  <div class="slider__promo slider__promo--third">
+   <b class="slider__slogan">Только наркотики, только хардкор!</b>
    <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
    <a class="button button--slider" href="#">Узнать больше</a>
   </div>
@@ -61,18 +72,15 @@
    <img src="img/slide3.png" alt="Слайдер">
   </div>
  </div>
- <div class="slider__toggle">
-  <input type="radio" name="slider" id="slide1" checked>
-  <input type="radio" name="slider" id="slide2">
-  <input type="radio" name="slider" id="slide3">
- </div>
- <div class="slider__controls">
-  <label for="slide1"></label>
-  <label for="slide2"></label>
-  <label for="slide3"></label>
- </div>
 </div>
 
+ <div class="slider__controls">
+  <label class="slider__control  slider__control--first" for="slide1"></label>
+  <label class="slider__control  slider__control--second" for="slide2"></label>
+  <label class="slider__control  slider__control--third" for="slide3"></label>
+ </div>
+
+</div>
  </div>
 </header>
 
@@ -129,9 +137,15 @@
  </section>
  </div>
  <section class="our-products">
-   <img class="our-products__image" alt="Логотип Glukhanko" src="img/glukhanko-logo.png">
-   <img class="our-products__image" alt="Логотип Academy" src="img/academy-logo.png">
-   <img class="our-products__image" alt="Логотип Barbershop" src="img/barbershop-logo.png">
+   <a class="our-products__link our-products__link--glukhanko" href="#">
+     <!-- <img class="our-products__image" alt="Логотип Glukhanko" src="img/glukhanko-logo.png"> -->
+   </a>
+   <a class="our-products__link our-products__link--academy" href="#">
+     <!-- <img class="our-products__image" alt="Логотип Academy" src="img/academy-logo.png"> -->
+   </a>
+   <a class="our-products__link our-products__link--barbershop" href="#">
+      <!-- <img class="our-products__image" alt="Логотип Barbershop" src="img/barbershop-logo.png"> -->
+   </a>
  </section>
  </div>
 
