@@ -5,6 +5,7 @@
     <title>Nerds</title>
     <link type="text/css" rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="normalize.css">
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
@@ -23,7 +24,7 @@
   <ul class="main-nav__list">
    <li class="main-nav__item"><a href="#">студия</a></li>
    <li class="main-nav__item"><a href="#">клиенты</a></li>
-   <li class="main-nav__item"><a href="#">магазин</a></li>
+   <li class="main-nav__item"><a href="catalog.html">магазин</a></li>
    <li class="main-nav__item"><a href="#">контакты</a></li>
   </ul>
  </div>
@@ -149,13 +150,14 @@
  </section>
  </div>
 
- <section class="map">
+ <section class="map" id="YMapsID">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa1f5300f685b72ba6c2a466a833b9eed6f3e8580f14999ecec7de5c9e65f3ba4&amp;width=1200&amp;height=416&amp;lang=ru_RU&amp;scroll=true"></script>
    <div class="wrapper">
    <div class="map__contacts">
      <b class="map__title">NЁRDS DESIGN STUDIO</b>
      <p class="map__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
      <p class="map__phone">тел. +7 (812) 275-75-75</p>
-     <a class="button" href="#">напишите нам</a>
+     <a class="button" href="feedback.html">напишите нам</a>
   </div>
 </div>
  </section>
@@ -168,15 +170,28 @@
      <a class="social__link  social__link--ig" href="#">Инстаграмм</a>
    </div>
    <div class="page-footer__discount">
-     <h2>Давайте дружить, это выгодно!</h2>
+     <h2  class="page-footer__title">Давайте дружить, это выгодно!</h2>
      <p>Скидка 10% для друзей из социальных сетей.</p>
    </div>
  </footer>
 
-
-
-
-
+ <div class="modal-form">
+   <form class="feedback-form" name="feedback-form" method="post">
+     <label class="feedback-form__name">
+       Ваше имя:<br>
+       <input class="feedback-form__input" type="text" placeholder="представьтесь, пожалуйста">
+     </label>
+     <label class="feedback-form__mail">
+       Ваш e-mail:<br>
+       <input class="feedback-form__input" type="text" placeholder="для отправки ответа">
+     </label>
+     <label class="feedback-form__text">
+       Текст письма:<br>
+       <textarea class="feedback-form__input feedback-form__input--area"> в свободной форме</textarea>
+     </label>
+     <button type="submit" class="button button--submit">отправить</button>
+   </form>
+ </div>
 
 
 </body>
